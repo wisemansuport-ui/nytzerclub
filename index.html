@@ -1429,13 +1429,13 @@
       padding-bottom: max(20px, env(safe-area-inset-bottom, 20px));
       visibility: hidden;
       opacity: 0;
-      transition: opacity .25s, visibility 0s .25s;
+      transition: opacity .1s, visibility 0s .1s;
     }
 
     .lightbox.open {
       visibility: visible;
       opacity: 1;
-      transition: opacity .25s, visibility 0s 0s;
+      transition: opacity .1s, visibility 0s 0s;
     }
 
     .lightbox img {
@@ -1444,42 +1444,12 @@
       border-radius: 12px;
       object-fit: contain;
       transform: scale(0.9);
-      transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+      transition: transform .15s cubic-bezier(.22, 1, .36, 1);
       pointer-events: none;
     }
 
     .lightbox.open img {
       transform: scale(1);
-    }
-
-    .lightbox-close {
-      position: fixed;
-      top: max(16px, env(safe-area-inset-top, 16px));
-      right: 16px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.75);
-      border: 1.5px solid rgba(255, 255, 255, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      cursor: pointer;
-      transition: all .2s;
-      z-index: 310;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .lightbox-close:hover,
-    .lightbox-close:active {
-      background: rgba(201, 168, 76, 0.3);
-      border-color: var(--gold);
-    }
-
-    .lightbox-close svg {
-      width: 20px;
-      height: 20px;
     }
 
     .lightbox-hint {
@@ -2373,12 +2343,6 @@
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <button class="lightbox-close" id="lightbox-close-btn" onclick="closeLightbox()" aria-label="Fechar imagem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-      </svg>
-    </button>
     <img id="lightbox-img" src="" alt="">
     <div class="lightbox-hint">Toque fora para fechar</div>
   </div>
