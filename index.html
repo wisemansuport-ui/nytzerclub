@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYTZER CLUB — @nytzer</title>
+  <meta name="description"
+    content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club.">
+
+  <!-- ── SEO & SOCIAL SHARING (OPEN GRAPH) ── -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seusite.com.br/">
+  <meta property="og:title" content="NYTZER CLUB — @nytzer">
+  <meta property="og:description"
+    content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club e fature comissões reais.">
+  <meta property="og:image" content="https://seusite.com.br/capa-compartilhamento.jpg">
+  <!-- Lembre-se de hospedar essa foto -->
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://seusite.com.br/">
+  <meta property="twitter:title" content="NYTZER CLUB — @nytzer">
+  <meta property="twitter:description"
+    content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club e fature comissões reais.">
+  <meta property="twitter:image" content="https://seusite.com.br/capa-compartilhamento.jpg">
+
+  <!-- ── PERFORMANCE (PRECONNECT FONTES) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- ── TRACKING ANALYTICS (G-1P8W7YS29T - Substitua pelo seu ID Google Analytics) ── -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P8W7YS29T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1P8W7YS29T');
+  </script>
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0C96A;
+      --gold-dim: rgba(201, 168, 76, 0.18);
+      --black: #060606;
+      --surface: #0F0F0F;
+      --surface2: #161616;
+      --surface3: #1E1E1E;
+      --white: #F8F2E8;
+      --muted: rgba(248, 242, 232, 0.45);
+      --muted2: rgba(248, 242, 232, 0.22);
+      --red: #FF4D1C;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      height: 100%
+    }
+
+    body {
+      background: #080704;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none
+    }
+
+    /* BG */
+    #particle-wrap {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #particle-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+
+    /* PAGE */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 52px 20px 72px;
+      max-width: 520px;
+      margin: 0 auto
+    }
+
+    /* AVATAR */
+    .avatar-wrap {
+      position: relative;
+      margin-bottom: 22px;
+      animation: fadeDown .7s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .avatar-ring-outer {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden
+    }
+
+    .avatar-ring-outer::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0deg, var(--gold-light) 60deg, transparent 120deg, var(--gold) 200deg, transparent 260deg, var(--gold-light) 320deg, transparent 360deg);
+      animation: spinRing 5s linear infinite;
+      z-index: 0
+    }
+
+    .avatar-ring-outer::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      background: #060606;
+      z-index: 1
+    }
+
+    @keyframes spinRing {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .avatar-inner {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #1a160a 0%, #080808 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2
+    }
+
+    .avatar-icon {
+      width: 38px;
+      height: 38px;
+      color: var(--gold-light);
+      animation: boltPulse 3s ease-in-out infinite
+    }
+
+    @keyframes boltPulse {
+
+      0%,
+      100% {
+        filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.6))
+      }
+
+      50% {
+        filter: drop-shadow(0 0 22px rgba(240, 201, 106, 0.95))
+      }
+    }
+
+    .online-dot {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 16px;
+      height: 16px;
+      background: #2ECC71;
+      border-radius: 50%;
+      border: 2.5px solid var(--black);
+      z-index: 3;
+      animation: onlinePulse 2s ease-in-out infinite
+    }
+
+    @keyframes onlinePulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, .5)
+      }
+
+      50% {
+        box-shadow: 0 0 0 5px rgba(46, 204, 113, 0)
+      }
+    }
+
+    /* NAME / BIO */
+    .brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 46px;
+      letter-spacing: 7px;
+      line-height: 1;
+      text-align: center;
+      background: linear-gradient(170deg, var(--white) 0%, var(--gold-light) 55%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+      animation: fadeDown .7s .08s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .handle {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 10px;
+      animation: fadeDown .7s .12s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 77, 28, 0.12);
+      border: 1px solid rgba(255, 77, 28, 0.28);
+      border-radius: 30px;
+      padding: 4px 14px 4px 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FF7A55;
+      margin-bottom: 14px;
+      animation: fadeDown .7s .16s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+      animation: liveBlink 1.4s ease-in-out infinite
+    }
+
+    @keyframes liveBlink {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .35;
+        transform: scale(.85)
+      }
+    }
+
+    .divider {
+      width: 56px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 14px;
+      animation: fadeDown .7s .18s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .bio {
+      text-align: center;
+      max-width: 300px;
+      margin-bottom: 20px;
+      animation: fadeDown .7s .22s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .bio-sub {
+      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-size: 12.5px;
+      font-weight: 300;
+      color: rgba(248, 242, 232, 0.3);
+      letter-spacing: 0.3px;
+      line-height: 1.5;
+      margin-bottom: 8px
+    }
+
+    .bio-main {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: linear-gradient(120deg, var(--white) 0%, var(--gold-light) 60%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25
+    }
+
+
+
+    /* STATS */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      animation: fadeUp .7s .3s cubic-bezier(.22, 1, .36, 1) both;
+      border: 1px solid rgba(201, 168, 76, 0.1)
+    }
+
+    .stat {
+      flex: 1;
+      padding: 16px 8px;
+      text-align: center;
+      background: var(--surface);
+      position: relative;
+      transition: background .25s
+    }
+
+    .stat:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: rgba(201, 168, 76, 0.12)
+    }
+
+    .stat:hover {
+      background: var(--surface2)
+    }
+
+    .stat-num {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 1.5px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .stat-suffix {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      vertical-align: middle;
+    }
+
+    .stat-label {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted2);
+      margin-top: 3px
+    }
+
+    /* SECTION LABEL */
+    .section-label {
+      align-self: flex-start;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.4);
+      margin-bottom: 12px;
+      padding-left: 2px;
+      animation: fadeUp .7s .34s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    /* LINK CARDS */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      background: var(--surface);
+      color: var(--white);
+      transition: all .32s cubic-bezier(.22, 1, .36, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.07), transparent);
+      transition: left .5s;
+      pointer-events: none
+    }
+
+    .link-card::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--gold-dim);
+      border-radius: 4px 0 0 4px;
+      transition: background .28s
+    }
+
+    .link-card:hover {
+      border-color: rgba(201, 168, 76, 0.35);
+      background: var(--surface2);
+      transform: translateX(6px);
+      box-shadow: -5px 0 24px rgba(201, 168, 76, 0.12), 0 8px 32px rgba(0, 0, 0, 0.4)
+    }
+
+    .link-card:hover::before {
+      left: 140%
+    }
+
+    .link-card:hover::after {
+      background: var(--gold)
+    }
+
+    .link-card.featured {
+      background: linear-gradient(135deg, #18130A 0%, #0E0B05 100%);
+      border-color: rgba(201, 168, 76, 0.28)
+    }
+
+    .link-card.featured::after {
+      background: rgba(201, 168, 76, 0.5)
+    }
+
+    .link-card.featured:hover {
+      border-color: rgba(201, 168, 76, 0.55);
+      box-shadow: -5px 0 28px rgba(201, 168, 76, 0.2), 0 10px 40px rgba(0, 0, 0, 0.5)
+    }
+
+    .link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all .28s;
+      color: var(--gold)
+    }
+
+    .link-icon svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .link-card:hover .link-icon {
+      background: rgba(201, 168, 76, 0.16);
+      border-color: rgba(201, 168, 76, 0.4);
+      transform: scale(1.05)
+    }
+
+    .link-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .link-tag {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1px
+    }
+
+    .link-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--white);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.2
+    }
+
+    .link-card.featured .link-title {
+      color: var(--gold-light)
+    }
+
+    .link-desc {
+      font-size: 11px;
+      color: var(--muted2);
+      margin-top: 1px
+    }
+
+    .link-arrow {
+      color: rgba(201, 168, 76, 0.35);
+      flex-shrink: 0;
+      transition: all .28s
+    }
+
+    .link-arrow svg {
+      width: 16px;
+      height: 16px
+    }
+
+    .link-card:hover .link-arrow {
+      color: var(--gold);
+      transform: translateX(4px)
+    }
+
+    .links .link-card:nth-child(1) {
+      animation: fadeUp .65s .38s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .links .link-card:nth-child(2) {
+      animation: fadeUp .65s .44s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .links .link-card:nth-child(3) {
+      animation: fadeUp .65s .50s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .links .link-card:nth-child(4) {
+      animation: fadeUp .65s .56s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .links .link-card:nth-child(5) {
+      animation: fadeUp .65s .62s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    /* CTA */
+    .cta-section {
+      width: 100%;
+      margin-top: 28px;
+      animation: fadeUp .65s .68s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .cta-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.4);
+      margin-bottom: 10px;
+      padding-left: 2px
+    }
+
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px 24px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #8B6914 100%);
+      color: #0A0705;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 3px;
+      position: relative;
+      overflow: hidden;
+      transition: all .32s cubic-bezier(.22, 1, .36, 1);
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.2)
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+      transition: left .55s
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 44px rgba(201, 168, 76, 0.38)
+    }
+
+    .cta-btn:hover::before {
+      left: 100%
+    }
+
+    .cta-btn:active {
+      transform: translateY(0)
+    }
+
+    .cta-btn svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      animation: fadeUp .65s .8s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .footer-powered {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted2)
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      font-size: 11px;
+      color: rgba(248, 242, 232, 0.18)
+    }
+
+    .footer-links a {
+      transition: color .2s
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-dim)
+    }
+
+    /* SHARE */
+    .share-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      transition: all .28s;
+      z-index: 50;
+      animation: fadeUp 1s 1s ease both
+    }
+
+    .share-btn:hover {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: var(--gold);
+      transform: scale(1.1)
+    }
+
+    .share-btn svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 88px;
+      right: 24px;
+      background: var(--surface3);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--gold-light);
+      font-family: 'Barlow Condensed', sans-serif;
+      letter-spacing: 1px;
+      z-index: 50;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all .3s;
+      pointer-events: none
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-18px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ═══ FEEDBACK CAROUSEL — INFINITE DRAG ═══ */
+    .feedback-section {
+      width: 100%;
+      margin-top: 36px;
+      animation: fadeUp .65s .74s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    /* ── Section header — impactful ── */
+    .feedback-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding: 0 2px
+    }
+
+    .feedback-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .feedback-title-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feedback-title-icon svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gold)
+    }
+
+    .feedback-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      background: linear-gradient(120deg, var(--white) 0%, var(--gold-light) 60%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .feedback-sub {
+      font-family: 'Barlow', sans-serif;
+      font-size: 10px;
+      color: rgba(201, 168, 76, 0.3);
+      letter-spacing: 0.5px;
+      margin-top: 1px
+    }
+
+    .feedback-counter {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: rgba(201, 168, 76, 0.25);
+      background: rgba(201, 168, 76, 0.04);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    .feedback-counter .fc-current {
+      color: var(--gold-light);
+      font-size: 18px
+    }
+
+    /* ── Divider line below header ── */
+    .feedback-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.15) 20%, rgba(201, 168, 76, 0.15) 80%, transparent);
+      margin-bottom: 18px
+    }
+
+    .feedback-track-wrap {
+      overflow: hidden;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      padding: 0 20px;
+      position: relative
+    }
+
+    .feedback-track-wrap::before,
+    .feedback-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+      z-index: 3;
+      pointer-events: none
+    }
+
+    .feedback-track-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, #080704 0%, transparent 100%)
+    }
+
+    .feedback-track-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, #080704 0%, transparent 100%)
+    }
+
+    .feedback-track {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 12px 4px 20px;
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none
+    }
+
+    .feedback-track.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto !important
+    }
+
+    .feedback-track::-webkit-scrollbar {
+      display: none
+    }
+
+    /* ── Card — premium glass finish ── */
+    .feedback-card {
+      flex: 0 0 200px;
+      height: 380px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform .45s cubic-bezier(.22, 1, .36, 1), box-shadow .45s ease, border-color .4s ease;
+      background: #0a0a0a;
+      border: 1.2px solid rgba(201, 168, 76, 0.12);
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5),
+        0 0 0 0.5px rgba(201, 168, 76, 0.06),
+        inset 0 1px 0 rgba(201, 168, 76, 0.06);
+    }
+
+    /* Gradient rim — catches light at top + subtle bottom */
+    .feedback-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      z-index: 2;
+      pointer-events: none;
+      border-radius: 25px;
+      border: 1.2px solid transparent;
+      background: linear-gradient(175deg, rgba(240, 201, 106, 0.22) 0%, rgba(201, 168, 76, 0.06) 12%, transparent 35%, transparent 80%, rgba(201, 168, 76, 0.04) 95%, rgba(201, 168, 76, 0.1) 100%) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    /* Inner top highlight — frosted glass effect */
+    .feedback-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 40%;
+      z-index: 1;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+    }
+
+    .feedback-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.7),
+        0 0 24px rgba(201, 168, 76, 0.08),
+        inset 0 1px 0 rgba(201, 168, 76, 0.1);
+      border-color: rgba(201, 168, 76, 0.25);
+    }
+
+    .feedback-card:active {
+      transform: scale(0.98);
+      transition-duration: .15s
+    }
+
+    /* ── Image ── */
+    .feedback-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+      transition: transform .5s cubic-bezier(.22, 1, .36, 1);
+      background: #0a0a0a;
+      position: relative;
+      z-index: 0;
+    }
+
+    .feedback-card:hover img {
+      transform: scale(1.04)
+    }
+
+    /* ── Drag hint ── */
+    .feedback-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.2);
+      transition: opacity .5s;
+    }
+
+    .feedback-hint.hidden {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .feedback-hint svg {
+      width: 16px;
+      height: 16px;
+      animation: hintSlide 2s ease-in-out infinite
+    }
+
+    @keyframes hintSlide {
+
+      0%,
+      100% {
+        transform: translateX(0);
+        opacity: .4
+      }
+
+      50% {
+        transform: translateX(6px);
+        opacity: 1
+      }
+    }
+
+    @media(max-width:539px) {
+      .page {
+        padding: 44px 16px 64px
+      }
+
+      .brand-name {
+        font-size: 38px;
+        letter-spacing: 5px
+      }
+
+      .link-card {
+        padding: 13px 14px;
+        gap: 12px
+      }
+
+      .link-icon {
+        width: 40px;
+        height: 40px
+      }
+
+      .link-title {
+        font-size: 15px
+      }
+    }
+
+    /* ══════════════════════════════════
+   PRESENTATION MODAL
+══════════════════════════════════ */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0;
+      pointer-events: none;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      background: rgba(0, 0, 0, 0.72);
+      pointer-events: all;
+      animation: modalFadeIn .25s ease forwards;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        background: rgba(0, 0, 0, 0)
+      }
+
+      to {
+        background: rgba(0, 0, 0, 0.72)
+      }
+    }
+
+    .modal-sheet {
+      width: 100%;
+      max-width: 520px;
+      max-height: 92vh;
+      background: linear-gradient(180deg, #0f0c05 0%, #080704 100%);
+      border-radius: 28px 28px 0 0;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-bottom: none;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transform: translateY(100%);
+      transition: transform .42s cubic-bezier(.22, 1, .36, 1);
+      position: relative;
+    }
+
+    .modal-sheet::-webkit-scrollbar {
+      display: none
+    }
+
+    .modal-overlay.open .modal-sheet {
+      transform: translateY(0)
+    }
+
+    .modal-handle {
+      width: 40px;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(201, 168, 76, 0.25);
+      margin: 14px auto 0;
+    }
+
+    .modal-hero {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, #1a1200 0%, #0a0800 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201, 168, 76, 0.18) 0%, transparent 70%);
+    }
+
+    .modal-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(201, 168, 76, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201, 168, 76, 0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .modal-hero-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, 0.1);
+      border: 1.5px solid rgba(201, 168, 76, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .modal-hero-icon svg {
+      width: 34px;
+      height: 34px;
+      color: var(--gold-light);
+      filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.7))
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      z-index: 10;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(201, 168, 76, 0.15);
+      border-color: var(--gold);
+      color: var(--gold)
+    }
+
+    .modal-close svg {
+      width: 16px;
+      height: 16px
+    }
+
+    .modal-body {
+      padding: 24px 24px 0
+    }
+
+    .modal-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.5);
+      display: block;
+      margin-bottom: 8px
+    }
+
+    .modal-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 12px
+    }
+
+    .modal-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 1px;
+      margin-bottom: 20px
+    }
+
+    .modal-desc {
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 16px
+    }
+
+    .modal-desc strong {
+      color: var(--gold-light)
+    }
+
+    .modal-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0
+    }
+
+    .modal-pillar {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 14px;
+      padding: 16px 14px
+    }
+
+    .modal-pillar-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(201, 168, 76, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px
+    }
+
+    .modal-pillar-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold)
+    }
+
+    .modal-pillar-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px
+    }
+
+    .modal-pillar-desc {
+      font-family: 'Barlow', sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.45)
+    }
+
+    .modal-steps-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.4);
+      display: block;
+      margin: 20px 0 12px
+    }
+
+    .modal-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0
+    }
+
+    .modal-step {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05)
+    }
+
+    .modal-step:last-child {
+      border-bottom: none
+    }
+
+    .modal-step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      color: var(--gold);
+      margin-top: 1px
+    }
+
+    .modal-step-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 3px
+    }
+
+    .modal-step-desc {
+      font-family: 'Barlow', sans-serif;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.45)
+    }
+
+    .modal-testimonial {
+      background: rgba(201, 168, 76, 0.05);
+      border: 1px solid rgba(201, 168, 76, 0.12);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 20px 0
+    }
+
+    .modal-testimonial-quote {
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      font-style: italic;
+      margin-bottom: 10px
+    }
+
+    .modal-testimonial-author {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(201, 168, 76, 0.5)
+    }
+
+    .modal-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 17px;
+      margin: 20px 0 28px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #C9A84C, #F0C96A);
+      color: #080704;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      transition: all .28s;
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.35)
+    }
+
+    .modal-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.5)
+    }
+
+    .modal-cta svg {
+      width: 20px;
+      height: 20px
+    }
+
+    @media(min-width:540px) {
+      .modal-sheet {
+        border-radius: 28px;
+        margin-bottom: 32px;
+        max-height: 88vh
+      }
+
+      .modal-overlay {
+        align-items: center;
+        padding: 20px
+      }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 300;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .25s, visibility 0s .25s;
+    }
+
+    .lightbox.open {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .25s, visibility 0s 0s;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+      object-fit: contain;
+      transform: scale(0.9);
+      transition: transform .35s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .lightbox.open img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(201, 168, 76, 0.2);
+      border-color: var(--gold);
+    }
+
+    .lightbox-close svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="particle-wrap"><canvas id="particle-canvas"></canvas></div>
+
+  <div class="page">
+
+    <!-- ── AVATAR ── -->
+    <div class="avatar-wrap">
+      <div class="avatar-ring-outer">
+        <div class="avatar-inner">
+          <!-- Bolt / zap icon (Feather-style) -->
+          <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── NAME ── -->
+    <div class="brand-name">NYTZER CLUB</div>
+
+
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      Comunidade Ativa
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── BIO ── -->
+    <div class="bio">
+      <span class="bio-sub">Método Real · Performance Comprovada · CPA 1%</span>
+      <span class="bio-main">O mercado não espera. A pergunta é: você vai ficar parado?</span>
+    </div>
+    <!-- ── STATS ── -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num"><span class="stat-val" data-count="1" data-suffix="K–5K+">1K–5K+</span></span>
+        <span class="stat-label">Depositantes Semanais</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num"><span class="stat-val" data-count="10" data-suffix="+">10+</span></span>
+        <span class="stat-label">Agentes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num"><span class="stat-val" data-count="5" data-suffix="★">5★</span></span>
+        <span class="stat-label">Reputação</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num"><span class="stat-val" data-count="3" data-suffix="+">3+</span></span>
+        <span class="stat-label">Anos</span>
+      </div>
+      <div class="stat" style="flex-basis:100%;border-top:1px solid rgba(201,168,76,0.1);">
+        <span class="stat-num">R$<span class="stat-val" data-count="3" data-suffix="K–R$10K+">3K–R$10K+</span><span
+            class="stat-suffix">/Mês</span></span>
+        <span class="stat-label"
+          style="font-size:10px;letter-spacing:0.8px;text-transform:none;line-height:1.5;padding:0 8px;">de comissões
+          geradas para minhas <span style="color:var(--gold-light)">Agentes</span> (% descontada dos meus salários como
+          blogueiro)</span>
+      </div>
+    </div>
+
+    <!-- ── SECTION LABEL ── -->
+    <div class="section-label">— Escolha seu caminho &nbsp;·&nbsp; Agente, Blogueiro ou Parceiro</div>
+
+    <!-- ── LINKS ── -->
+    <div class="links">
+
+      <!-- 1. Recrutamento — medal -->
+      <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="link-card featured">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+        </div>
+        <div class="link-info">
+          <span class="link-tag">Vagas Limitadas</span>
+          <div class="link-title">Quero ser Agente Nytzer</div>
+          <div class="link-desc">Ganhe comissões diárias sem se preocupar com CPA mal feito ou reembolsos. Aqui
+            escalamos com excelência e estratégia validada</div>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 2. Blog — edit/pen -->
+      <a href="#" target="_blank" class="link-card featured">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" fill="currentColor" />
+            <line x1="12" y1="2" x2="12" y2="5" />
+            <line x1="12" y1="19" x2="12" y2="22" />
+            <line x1="2" y1="12" x2="5" y2="12" />
+            <line x1="19" y1="12" x2="22" y2="12" />
+          </svg>
+        </div>
+        <div class="link-info">
+          <span class="link-tag">Para Blogueiros</span>
+          <div class="link-title">Blogueiro? Eu bato sua meta por você</div>
+          <div class="link-desc">Você repassa, eu executo. 100% dos depositantes entregues com agilidade e zero
+            reembolso</div>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 3. O que é o Nytzer Club? — layers/stack -->
+      <button id="card-apresentacao" class="link-card" style="text-align:left;width:100%;">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <div class="link-info">
+          <span class="link-tag">Entenda o método</span>
+          <div class="link-title">Como funciona o Nytzer Club?</div>
+          <div class="link-desc">3 anos de operação. Zero promessa. Só resultado comprovado</div>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </span>
+      </button>
+
+      <!-- 4. Instagram -->
+      <a href="https://instagram.com/nytzer_" target="_blank" class="link-card">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+          </svg>
+        </div>
+        <div class="link-info">
+          <span class="link-tag">Bastidores</span>
+          <div class="link-title">Instagram @nytzer_</div>
+          <div class="link-desc">Resultados ao vivo · Operações diárias · Provas reais</div>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 5. Planilha Financeira — NEW -->
+      <a href="#" target="_blank" class="link-card featured">
+        <div class="link-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <line x1="3" y1="9" x2="21" y2="9" />
+            <line x1="3" y1="15" x2="21" y2="15" />
+            <line x1="9" y1="3" x2="9" y2="21" />
+          </svg>
+        </div>
+        <div class="link-info">
+          <span class="link-tag">Produto Exclusivo</span>
+          <div class="link-title">Sua gestão financeira em um clique</div>
+          <div class="link-desc">Saiba exatamente quanto entrou, quanto saiu e quanto lucrou — feita por quem opera de
+            verdade</div>
+        </div>
+        <span class="link-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </span>
+      </a>
+
+    </div>
+
+    <!-- ── FEEDBACKS — MODERN CAROUSEL ── -->
+    <div class="feedback-section">
+      <div class="feedback-header">
+        <div class="feedback-title-wrap">
+          <div class="feedback-title-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+          </div>
+          <div>
+            <div class="feedback-label">Feedbacks Reais</div>
+            <div class="feedback-sub">Prints de agentes e blogueiros</div>
+          </div>
+        </div>
+        <div class="feedback-counter"><span class="fc-current" id="fcCurrent">1</span> / <span id="fcTotal">6</span>
+        </div>
+      </div>
+      <div class="feedback-divider"></div>
+      <div class="feedback-track-wrap">
+        <div class="feedback-track" id="feedbackTrack">
+
+          <!-- SLOT 1 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="print_1.jpeg" alt="Print 1" loading="lazy">
+          </div>
+
+          <!-- SLOT 2 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="print_2.PNG" alt="Print 2" loading="lazy">
+          </div>
+
+          <!-- SLOT 3 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="print_3.jpeg" alt="Print 3" loading="lazy">
+          </div>
+
+          <!-- SLOT 4 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="p_rint_3.jpeg" alt="Print 4" loading="lazy">
+          </div>
+
+          <!-- SLOT 5 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="print_5.PNG" alt="Print 5" loading="lazy">
+          </div>
+
+          <!-- SLOT 6 -->
+          <div class="feedback-card" onclick="openLightbox(this)">
+            <img src="print_6.PNG" alt="Print 6" loading="lazy">
+          </div>
+
+        </div>
+      </div>
+      <!-- Drag hint -->
+      <div class="feedback-hint" id="fbHint">
+        Arraste para ver mais
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-label">— Conexões reais que fecham negócio → Grupo FREE.</div>
+      <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="cta-btn">
+        <!-- Zap icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
+        Networking Nytzer Club
+      </a>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <div class="footer">
+      <div class="footer-powered">nytzer.club · 2025</div>
+      <div class="footer-links">
+        <a href="#">Privacidade</a>
+        <span>·</span>
+        <a href="#">Reportar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ PRESENTATION MODAL ══ -->
+  <div class="modal-overlay" id="modal-overlay" style="display:none">
+    <div class="modal-sheet" id="modal-sheet">
+
+      <div class="modal-handle"></div>
+
+      <!-- Hero banner -->
+      <div class="modal-hero">
+        <div class="modal-hero-grid"></div>
+        <div class="modal-hero-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <button class="modal-close" onclick="closeModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <span class="modal-tag">Por que confiar?</span>
+        <div class="modal-title">O que é o<br>Nytzer Club?</div>
+        <div class="modal-divider"></div>
+
+        <p class="modal-desc">
+          Enquanto outros prometem, eu <strong>entrego depositantes reais, todos os dias</strong>. O Nytzer Club é o
+          ecossistema que conecta quem quer lucrar com quem já sabe operar. Sem enrolação. Sem promessa vazia.
+        </p>
+        <p class="modal-desc">
+          Aqui, <strong>blogueiros repassam suas metas</strong> e recebem 100% dos depositantes. <strong>Agentes entram
+            na operação</strong> e faturam comissões diárias. O método já movimentou mais de <strong>R$10K+/mês em
+            comissões reais</strong>.
+        </p>
+
+        <div class="modal-pillars">
+          <div class="modal-pillar">
+            <div class="modal-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg></div>
+            <div class="modal-pillar-title">Rede Ativa</div>
+            <div class="modal-pillar-desc">+10 agentes operando juntos com metas batidas toda semana</div>
+          </div>
+          <div class="modal-pillar">
+            <div class="modal-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg></div>
+            <div class="modal-pillar-title">Performance</div>
+            <div class="modal-pillar-desc">1K a 5K+ depositantes entregues por semana — números reais, não promessas
+            </div>
+          </div>
+          <div class="modal-pillar">
+            <div class="modal-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg></div>
+            <div class="modal-pillar-title">Lucro Real</div>
+            <div class="modal-pillar-desc">R$3K–R$10K+/mês em comissões — quem tá dentro, não quer sair</div>
+          </div>
+          <div class="modal-pillar">
+            <div class="modal-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div class="modal-pillar-title">+3 Anos</div>
+            <div class="modal-pillar-desc">Reputação construída com consistência — pergunte a qualquer agente meu</div>
+          </div>
+        </div>
+
+        <span class="modal-steps-label">— Como funciona na prática</span>
+        <div class="modal-steps">
+          <div class="modal-step">
+            <div class="modal-step-num">1</div>
+            <div>
+              <div class="modal-step-title">Me chama no WhatsApp</div>
+              <div class="modal-step-desc">Diz se você é agente ou blogueiro — eu te encaixo no lugar certo</div>
+            </div>
+          </div>
+          <div class="modal-step">
+            <div class="modal-step-num">2</div>
+            <div>
+              <div class="modal-step-title">Recebe o método</div>
+              <div class="modal-step-desc">Acesso ao playbook, scripts e suporte direto comigo</div>
+            </div>
+          </div>
+          <div class="modal-step">
+            <div class="modal-step-num">3</div>
+            <div>
+              <div class="modal-step-title">Começa a operar</div>
+              <div class="modal-step-desc">Depositantes reais chegando no mesmo dia — sem esperar semanas</div>
+            </div>
+          </div>
+          <div class="modal-step">
+            <div class="modal-step-num">4</div>
+            <div>
+              <div class="modal-step-title">Lucra todo dia</div>
+              <div class="modal-step-desc">Comissões recorrentes caindo na conta — sem teto, sem limite</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-testimonial">
+          <div class="modal-testimonial-quote">"Desde que comecei com o Nytzer, estruturei minha vida financeira. O
+            método funciona de verdade e os depositantes chegam todo dia."</div>
+          <div class="modal-testimonial-author">— Agente ativa, 4 meses no clube</div>
+        </div>
+
+        <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="modal-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Quero começar a lucrar
+        </a>
+
+      </div><!-- /modal-body -->
+    </div><!-- /modal-sheet -->
+  </div><!-- /modal-overlay -->
+
+  <!-- SHARE -->
+  <button class="share-btn" onclick="shareProfile()" title="Compartilhar perfil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+      stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+    </svg>
+  </button>
+  <div class="toast" id="toast">Link copiado ✓</div>
+
+  <script>
+    // ── RASTREAMENTO DE CLIQUES (ANALYTICS) ──
+    document.addEventListener('DOMContentLoaded', () => {
+      const linkCards = document.querySelectorAll('.links .link-card');
+      if (linkCards.length >= 2) {
+        const btnAgente = linkCards[0]; // 1º Card: Quero ser Agente Nytzer
+        const btnBlogueiro = linkCards[1]; // 2º Card: Blogueiro
+
+        // Tracking clique Agente
+        btnAgente.addEventListener('click', () => {
+          console.log('📝 Rastreado: Clique no card de Agente');
+          if (typeof gtag === 'function') {
+            gtag('event', 'click', {
+              'event_category': 'Cards de Conversão',
+              'event_label': 'Botão: Quero ser Agente Nytzer'
+            });
+          }
+        });
+
+        // Tracking clique Blogueiro
+        btnBlogueiro.addEventListener('click', () => {
+          console.log('📝 Rastreado: Clique no card de Blogueiro');
+          if (typeof gtag === 'function') {
+            gtag('event', 'click', {
+              'event_category': 'Cards de Conversão',
+              'event_label': 'Botão: Blogueiro Bate Meta'
+            });
+          }
+        });
+      }
+    });
+
+    // ── SHARE ──
+    function shareProfile() {
+      const url = window.location.href;
+      if (navigator.share) {
+        navigator.share({ title: 'NYTZER CLUB', url });
+      } else {
+        navigator.clipboard.writeText(url).then(() => {
+          const t = document.getElementById('toast');
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2400);
+        });
+      }
+    }
+
+    // ── STAT COUNTER ANIMATION ──
+    function animateCounters() {
+      document.querySelectorAll('.stat-val[data-count]').forEach(function (el) {
+        var target = parseFloat(el.dataset.count);
+        var suffix = el.dataset.suffix || '';
+        var steps = 60;
+        var interval = 1600 / steps;
+        var current = 0;
+        var increment = target / steps;
+        var timer = setInterval(function () {
+          current += increment;
+          if (current >= target) { current = target; clearInterval(timer); }
+          var display = Number.isInteger(target) ? Math.round(current) : current.toFixed(1);
+          el.textContent = display + suffix;
+        }, interval);
+      });
+    }
+    setTimeout(animateCounters, 500);
+    // ── MODALS ──
+    var overlay = document.getElementById('modal-overlay');
+    var cardBtn = document.getElementById('card-apresentacao');
+    var sheet = document.getElementById('modal-sheet');
+    var touchStartY = 0;
+
+    function iconBounce(el) {
+      var icon = el.querySelector('.link-icon');
+      if (!icon) return;
+      icon.style.transform = 'scale(1.18)';
+      icon.style.transition = 'transform .15s';
+      setTimeout(function () { icon.style.transform = ''; }, 200);
+    }
+
+    function openModal() {
+      overlay.style.display = 'flex';
+      overlay._opening = true;
+      requestAnimationFrame(function () {
+        overlay.classList.add('open');
+        setTimeout(function () { overlay._opening = false; }, 450); // wait for sheet slide-in
+      });
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      overlay.classList.remove('open');
+      if (!overlay.classList.contains('open')) document.body.style.overflow = '';
+      setTimeout(function () { overlay.style.display = 'none'; }, 300);
+    }
+
+    cardBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      iconBounce(this);
+      openModal();
+    });
+
+    overlay.addEventListener('click', function (e) {
+      if (overlay._opening) return; // block clicks during open animation
+      if (e.target === overlay) closeModal(); // only close when clicking the dark backdrop directly
+    });
+
+    sheet.addEventListener('touchstart', function (e) { touchStartY = e.touches[0].clientY; }, { passive: true });
+    sheet.addEventListener('touchend', function (e) { if (e.changedTouches[0].clientY - touchStartY > 80) closeModal(); }, { passive: true });
+
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+    // Icon bounce for link cards
+    document.querySelectorAll('a.link-card').forEach(function (card) {
+      card.addEventListener('click', function () { iconBounce(this); });
+    });
+    // ── FEEDBACK CAROUSEL — INFINITE DRAG ──
+    (function () {
+      var track = document.getElementById('feedbackTrack');
+      var counter = document.getElementById('fcCurrent');
+      var total = document.getElementById('fcTotal');
+      var hint = document.getElementById('fbHint');
+      if (!track) return;
+
+      // ── Clone cards for infinite illusion ──
+      var origCards = Array.prototype.slice.call(track.querySelectorAll('.feedback-card'));
+      var N = origCards.length;
+      if (!N) return;
+      if (total) total.textContent = N;
+
+      // Clone all cards and append before + after for seamless loop
+      var clonesBefore = [], clonesAfter = [];
+      for (var i = 0; i < N; i++) {
+        var cb = origCards[i].cloneNode(true);
+        var ca = origCards[i].cloneNode(true);
+        cb.setAttribute('data-clone', '1');
+        ca.setAttribute('data-clone', '1');
+        clonesBefore.push(cb);
+        clonesAfter.push(ca);
+      }
+      // Prepend clones
+      for (var i = N - 1; i >= 0; i--) track.insertBefore(clonesBefore[i], track.firstChild);
+      // Append clones
+      for (var i = 0; i < N; i++) track.appendChild(clonesAfter[i]);
+
+      var allCards = track.querySelectorAll('.feedback-card');
+      var GAP = 14;
+
+      function getCardW() { return origCards[0].offsetWidth + GAP; }
+
+      // Jump to "real" first set (offset by N clones prepended)
+      function jumpToReal() {
+        var cw = getCardW();
+        track.scrollLeft = cw * N;
+      }
+
+      // ── Infinite loop check ──
+      function checkLoop() {
+        var cw = getCardW();
+        var scrollPos = track.scrollLeft;
+        var realStart = cw * N;
+        var realEnd = cw * (N + N);
+
+        if (scrollPos <= cw * 0.5) {
+          // Past left edge → jump to real end
+          track.style.scrollBehavior = 'auto';
+          track.scrollLeft = scrollPos + cw * N;
+          // Force reflow
+          void track.offsetHeight;
+          track.style.scrollBehavior = '';
+        } else if (scrollPos >= realEnd - cw * 0.5) {
+          // Past right edge → jump to real start
+          track.style.scrollBehavior = 'auto';
+          track.scrollLeft = scrollPos - cw * N;
+          void track.offsetHeight;
+          track.style.scrollBehavior = '';
+        }
+      }
+
+      function updateCounter() {
+        var cw = getCardW();
+        var trackW = track.offsetWidth;
+        var center = track.scrollLeft + trackW / 2;
+        var idx = Math.round((center - cw / 2) / cw) % N;
+        if (idx < 0) idx += N;
+        if (counter) counter.textContent = idx + 1;
+      }
+
+      var scrollTimer;
+      track.addEventListener('scroll', function () {
+        checkLoop();
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(updateCounter, 60);
+      }, { passive: true });
+
+      // ── Drag-to-scroll (mouse) ──
+      var isDrag = false, startX = 0, scrollLeft = 0, dragMoved = false;
+
+      track.addEventListener('mousedown', function (e) {
+        isDrag = true;
+        dragMoved = false;
+        startX = e.pageX;
+        scrollLeft = track.scrollLeft;
+        track.classList.add('dragging');
+        // Hide hint on first drag
+        if (hint && !hint.classList.contains('hidden')) hint.classList.add('hidden');
+      });
+
+      document.addEventListener('mousemove', function (e) {
+        if (!isDrag) return;
+        e.preventDefault();
+        var dx = e.pageX - startX;
+        if (Math.abs(dx) > 4) dragMoved = true;
+        track.scrollLeft = scrollLeft - dx;
+      });
+
+      document.addEventListener('mouseup', function () {
+        if (!isDrag) return;
+        isDrag = false;
+        track.classList.remove('dragging');
+      });
+
+      // Prevent click on lightbox if user was dragging
+      track.addEventListener('click', function (e) {
+        if (dragMoved) { e.stopPropagation(); e.preventDefault(); }
+      }, true);
+
+      // ── Touch — hide hint ──
+      track.addEventListener('touchstart', function () {
+        if (hint && !hint.classList.contains('hidden')) hint.classList.add('hidden');
+      }, { passive: true });
+
+      // ── Init ──
+      jumpToReal();
+      updateCounter();
+    })();
+
+    (function () {
+      var wrap = document.getElementById('particle-wrap');
+      var canvas = document.getElementById('particle-canvas');
+      var W, H, DPR, ctx, particles, fogOrbs, animId;
+      var GOLDS = [[201, 168, 76], [218, 185, 90], [240, 201, 106], [252, 218, 130], [255, 228, 150]];
+
+      function rnd(a, b) { return a + Math.random() * (b - a); }
+      function pick() { return GOLDS[Math.floor(Math.random() * GOLDS.length)]; }
+
+      function resize() {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        DPR = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(W * DPR);
+        canvas.height = Math.round(H * DPR);
+        ctx = canvas.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(DPR, DPR);
+      }
+
+      function makeFog(px, py, pr, pa) {
+        return {
+          x: W * px, y: H * py, r: Math.min(W, H) * pr, maxA: pa,
+          phase: rnd(0, Math.PI * 2), spd: 0.003 + rnd(0, 0.002),
+          c: GOLDS[Math.floor(Math.random() * 3)]
+        };
+      }
+
+      function makeParticle() {
+        var c = pick(), ang = rnd(0, Math.PI * 2), spd = rnd(0.1, 0.28);
+        return {
+          x: rnd(0, W), y: rnd(0, H),
+          vx: Math.cos(ang) * spd, vy: Math.sin(ang) * spd,
+          r: rnd(1.0, 2.8), phase: rnd(0, Math.PI * 2),
+          pSpd: rnd(0.008, 0.02),
+          wander: rnd(0, Math.PI * 2), wSpd: rnd(0.003, 0.006), c: c
+        };
+      }
+
+      // ── Init only once — never restart from scroll ──
+      var initialized = false;
+      var stableW = 0;
+
+      function init() {
+        resize();
+        stableW = W;
+        fogOrbs = [makeFog(0.5, 0.06, 0.55, 0.07), makeFog(0.05, 0.85, 0.40, 0.04),
+        makeFog(0.95, 0.78, 0.40, 0.04), makeFog(0.5, 0.52, 0.45, 0.02)];
+        var mob = W <= 768, count = mob ? 55 : 90;
+        particles = [];
+        for (var i = 0; i < count; i++) particles.push(makeParticle());
+        initialized = true;
+        if (animId) cancelAnimationFrame(animId);
+        loop();
+      }
+
+      // Rescale canvas without restarting particles
+      function softResize() {
+        var newW = window.innerWidth;
+        var newH = window.innerHeight;
+        DPR = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(newW * DPR);
+        canvas.height = Math.round(newH * DPR);
+        ctx = canvas.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(DPR, DPR);
+        // Update fog positions proportionally
+        if (fogOrbs && W > 0) {
+          var scaleX = newW / W, scaleY = newH / H;
+          for (var f = 0; f < fogOrbs.length; f++) {
+            fogOrbs[f].x *= scaleX;
+            fogOrbs[f].y *= scaleY;
+            fogOrbs[f].r = Math.min(newW, newH) * (fogOrbs[f].r / Math.min(W, H));
+          }
+        }
+        // Scale particle positions
+        if (particles && W > 0) {
+          var sx = newW / W, sy = newH / H;
+          for (var i = 0; i < particles.length; i++) {
+            particles[i].x *= sx;
+            particles[i].y *= sy;
+          }
+        }
+        W = newW; H = newH;
+      }
+
+      function loop() {
+        if (!ctx) return;
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#080704';
+        ctx.fillRect(0, 0, W, H);
+
+        // ── Fog ──
+        for (var f = 0; f < fogOrbs.length; f++) {
+          var o = fogOrbs[f];
+          o.phase += o.spd;
+          var alpha = o.maxA * (0.6 + 0.4 * Math.sin(o.phase));
+          var r = o.c[0], g = o.c[1], b = o.c[2];
+          var fog = ctx.createRadialGradient(o.x, o.y, 0, o.x, o.y, o.r);
+          fog.addColorStop(0, 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')');
+          fog.addColorStop(0.5, 'rgba(' + r + ',' + g + ',' + b + ',' + (alpha * 0.3) + ')');
+          fog.addColorStop(1, 'rgba(' + r + ',' + g + ',' + b + ',0)');
+          ctx.beginPath(); ctx.arc(o.x, o.y, o.r, 0, Math.PI * 2);
+          ctx.fillStyle = fog; ctx.fill();
+        }
+
+        // ── Particles ──
+        var mob = W <= 768;
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.wander += p.wSpd * (Math.random() > 0.5 ? 1 : -1);
+          p.vx += Math.cos(p.wander) * 0.005;
+          p.vy += Math.sin(p.wander) * 0.005;
+          var spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+          if (spd > 0.35) { p.vx = p.vx / spd * 0.35; p.vy = p.vy / spd * 0.35; }
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10;
+          if (p.y < -10) p.y = H + 10; if (p.y > H + 10) p.y = -10;
+          p.phase += p.pSpd;
+          var al = 0.5 + 0.5 * Math.sin(p.phase);
+          var cr = p.c[0], cg = p.c[1], cb = p.c[2];
+
+          // Glow halo
+          var hr = p.r * (mob ? 3 : 5);
+          var glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, hr);
+          glow.addColorStop(0, 'rgba(' + cr + ',' + cg + ',' + cb + ',' + (al * 0.85) + ')');
+          glow.addColorStop(0.4, 'rgba(' + cr + ',' + cg + ',' + cb + ',' + (al * 0.3) + ')');
+          glow.addColorStop(1, 'rgba(' + cr + ',' + cg + ',' + cb + ',0)');
+          ctx.beginPath(); ctx.arc(p.x, p.y, hr, 0, Math.PI * 2);
+          ctx.fillStyle = glow; ctx.fill();
+
+          // Core dot
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + (0.6 + al * 0.4) + ')';
+          ctx.fill();
+        }
+
+        // ── Connection lines — desktop only ──
+        if (!mob) {
+          var CONN = 88 * 88;
+          ctx.lineWidth = 0.55;
+          for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            for (var j = i + 1; j < particles.length; j++) {
+              var q = particles[j];
+              var dx = p.x - q.x, dy = p.y - q.y, d2 = dx * dx + dy * dy;
+              if (d2 < CONN) {
+                ctx.globalAlpha = (1 - d2 / CONN) * 0.16;
+                ctx.strokeStyle = 'rgba(240,201,106,1)';
+                ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+              }
+            }
+          }
+          ctx.globalAlpha = 1;
+        }
+
+        animId = requestAnimationFrame(loop);
+      }
+
+      // ── Resize: only full reinit if WIDTH changes (not scroll-caused height shift) ──
+      var rTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(rTimer);
+        rTimer = setTimeout(function () {
+          var newW = window.innerWidth;
+          // iOS scroll hides browser bar → height changes but width stays same
+          // Only do full reinit when width actually changes (real resize/rotation)
+          if (Math.abs(newW - stableW) > 20) {
+            stableW = newW;
+            init();
+          } else {
+            // Just rescale canvas, keep particles alive
+            softResize();
+          }
+        }, 150);
+      });
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          cancelAnimationFrame(animId);
+          animId = null;
+        } else {
+          softResize();
+          loop();
+        }
+      });
+
+      init();
+    })();
+
+    // ── LIGHTBOX ──
+    function openLightbox(card) {
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightbox-img');
+      if (!lb || !lbImg) return;
+      var img = card.querySelector('img');
+      if (!img || !img.src) return; // skip placeholders
+      lbImg.src = img.src;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(e) {
+      var lb = document.getElementById('lightbox');
+      var lbImg = document.getElementById('lightbox-img');
+      if (!lb) return;
+      if (e && e.target === lbImg) return;
+      lb.classList.remove('open');
+      if (!overlay || !overlay.classList.contains('open')) document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</body>
+
+</html>
