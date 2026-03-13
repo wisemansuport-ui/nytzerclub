@@ -1007,7 +1007,7 @@
       font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(201, 168, 76, 0.6);
+      color: rgba(201, 168, 76, 0.9);
       transition: opacity .8s;
       -webkit-tap-highlight-color: transparent;
     }
@@ -2133,10 +2133,16 @@
         if (dragMoved) { e.stopPropagation(); e.preventDefault(); }
       }, true);
 
-      // ── Touch — hide hint only on actual carousel scroll ──
+      // ── Touch — hide hint only on actual carousel scroll after user interaction ──
       var hintHidden = false;
+      var hasInteracted = false;
+      
+      // Mark as interacted on touch or mouse down
+      track.addEventListener('touchstart', function() { hasInteracted = true; }, { passive: true });
+      track.addEventListener('mousedown', function() { hasInteracted = true; }, { passive: true });
+
       track.addEventListener('scroll', function () {
-        if (!hintHidden && hint && !hint.classList.contains('hidden')) {
+        if (hasInteracted && !hintHidden && hint && !hint.classList.contains('hidden')) {
           hint.classList.add('hidden');
           hintHidden = true;
         }
