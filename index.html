@@ -597,8 +597,15 @@
     /* CTA */
     .cta-section {
       width: 100%;
-      margin-top: 28px;
+      margin-top: 16px;
       animation: fadeUp .65s .68s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .cta-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.18) 20%, rgba(201, 168, 76, 0.18) 80%, transparent);
+      margin-bottom: 16px
     }
 
     .cta-label {
@@ -1538,13 +1545,13 @@
     </div>
 
     <!-- ── SECTION LABEL ── -->
-    <div class="section-label">— Escolha seu caminho &nbsp;·&nbsp; Agente, Blogueiro ou Parceiro</div>
+    <div class="section-label">— Área de acesso &nbsp;·&nbsp; O próximo passo é seu!</div>
 
     <!-- ── LINKS ── -->
     <div class="links">
 
       <!-- 1. Recrutamento — medal -->
-      <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="link-card featured">
+      <a href="https://wa.me/5522981593740?text=Ol%C3%A1!%20Vi%20que%20tem%20vagas%20abertas%20para%20agente.%20Quero%20entrar%20na%20opera%C3%A7%C3%A3o%20o%20mais%20r%C3%A1pido%20poss%C3%ADvel.%20Bora%20conversar%3F" target="_blank" class="link-card featured">
         <div class="link-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
             stroke-linejoin="round">
@@ -1554,7 +1561,7 @@
         </div>
         <div class="link-info">
           <span class="link-tag">Vagas Limitadas</span>
-          <div class="link-title">Quero ser Agente Nytzer</div>
+          <div class="link-title">Sou agente e gostaria de elevar o nível</div>
           <div class="link-desc">Ganhe comissões diárias sem se preocupar com CPA mal feito ou reembolsos. Aqui
             escalamos com excelência e estratégia validada</div>
         </div>
@@ -1568,7 +1575,7 @@
       </a>
 
       <!-- 2. Blog — edit/pen -->
-      <a href="#" target="_blank" class="link-card featured">
+      <a href="https://wa.me/5522981593740?text=Ol%C3%A1!%20Sou%20blogueiro(a)%20e%20preciso%20bater%20uma%20meta.%20Vi%20que%20voc%C3%AA%20entrega%20100%25%20dos%20depositantes%20na%20m%C3%A9dia%20e%20com%20apostas%20v%C3%A1lidas.%20Me%20passa%20os%20valores%20e%20como%20funciona%3F" target="_blank" class="link-card featured">
         <div class="link-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
             stroke-linejoin="round">
@@ -1586,32 +1593,6 @@
           <div class="link-title">Blogueiro? Eu bato sua meta por você</div>
           <div class="link-desc">Você repassa, eu executo. 100% dos depositantes entregues com agilidade e zero
             reembolso</div>
-        </div>
-        <span class="link-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" />
-            <polyline points="12 5 19 12 12 19" />
-          </svg>
-        </span>
-      </a>
-
-      <!-- 3. Planilha Financeira — NEW -->
-      <a href="#" target="_blank" class="link-card featured">
-        <div class="link-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
-            stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <line x1="3" y1="9" x2="21" y2="9" />
-            <line x1="3" y1="15" x2="21" y2="15" />
-            <line x1="9" y1="3" x2="9" y2="21" />
-          </svg>
-        </div>
-        <div class="link-info">
-          <span class="link-tag">Produto Exclusivo</span>
-          <div class="link-title">Sua gestão financeira em um clique</div>
-          <div class="link-desc">Saiba exatamente quanto entrou, quanto saiu e quanto lucrou — feita por quem opera de
-            verdade</div>
         </div>
         <span class="link-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
@@ -1659,7 +1640,7 @@
         <div class="link-info">
           <span class="link-tag">Bastidores</span>
           <div class="link-title">Instagram @nytzer_</div>
-          <div class="link-desc">Resultados ao vivo · Operações diárias · Provas reais</div>
+          <div class="link-desc">Resultados fora da curva. Operações diárias. Provas reais</div>
         </div>
         <span class="link-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
@@ -1697,32 +1678,32 @@
 
           <!-- SLOT 1 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-1.png.jpeg" alt="Print 1" loading="lazy">
+            <img src="print_1.jpeg" alt="Print 1" loading="lazy">
           </div>
 
           <!-- SLOT 2 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-2.png.jpeg" alt="Print 2" loading="lazy">
+            <img src="print_2.PNG" alt="Print 2" loading="lazy">
           </div>
 
           <!-- SLOT 3 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-3.png.PNG" alt="Print 3" loading="lazy">
+            <img src="print_3.jpeg" alt="Print 3" loading="lazy">
           </div>
 
           <!-- SLOT 4 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-4.png.jpeg" alt="Print 4" loading="lazy">
+            <img src="p_rint_3.jpeg" alt="Print 4" loading="lazy">
           </div>
 
           <!-- SLOT 5 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-5.png.PNG" alt="Print 5" loading="lazy">
+            <img src="print_5.PNG" alt="Print 5" loading="lazy">
           </div>
 
           <!-- SLOT 6 -->
           <div class="feedback-card" onclick="openLightbox(this)">
-            <img src="print-6.png.PNG" alt="Print 6" loading="lazy">
+            <img src="print_6.PNG" alt="Print 6" loading="lazy">
           </div>
 
         </div>
@@ -1739,6 +1720,7 @@
     </div>
 
     <div class="cta-section">
+      <div class="cta-divider"></div>
       <div class="feedback-header" style="margin-bottom: 12px;">
         <div class="feedback-title-wrap">
           <div class="feedback-title-icon">
@@ -1750,12 +1732,12 @@
             </svg>
           </div>
           <div>
-            <div class="feedback-label">GRUPO FREE</div>
+            <div class="feedback-label">GRUPO FREE PARA QUEM VIVE DE CPA</div>
             <div class="feedback-sub">CONEXÕES REAIS QUE FECHAM NEGÓCIO</div>
           </div>
         </div>
       </div>
-      <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="cta-btn">
+      <a href="https://chat.whatsapp.com/I8LECkXMVwE1w4D7Y9pFTW" target="_blank" class="cta-btn">
         <!-- Zap icon -->
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
           stroke-linejoin="round">
@@ -1767,13 +1749,8 @@
 
     <!-- ── FOOTER ── -->
     <div class="footer">
-      <div class="footer-powered">nytzer.club · 2025</div>
-      <div class="footer-links">
-        <a href="#">Privacidade</a>
-        <span>·</span>
-        <a href="#">Reportar</a>
+        <div style="font-family:'Barlow',sans-serif;font-size:10px;color:rgba(248,242,232,0.15);letter-spacing:0.5px;">© 2026 Nytzer Club. Todos os direitos reservados.</div>
       </div>
-    </div>
 
   </div>
 
@@ -1828,7 +1805,7 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg></div>
             <div class="modal-pillar-title">Rede Ativa</div>
-            <div class="modal-pillar-desc">+10 agentes operando juntos com metas batidas toda semana</div>
+            <div class="modal-pillar-desc">Inúmeros blogueiros(as) e agentes com metas batidas toda semana</div>
           </div>
           <div class="modal-pillar">
             <div class="modal-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -1855,7 +1832,7 @@
                 <polyline points="12 6 12 12 16 14" />
               </svg></div>
             <div class="modal-pillar-title">+3 Anos</div>
-            <div class="modal-pillar-desc">Reputação construída com consistência — pergunte a qualquer agente meu</div>
+            <div class="modal-pillar-desc">Reputação construída com consistência e desempenho</div>
           </div>
         </div>
 
@@ -1864,45 +1841,51 @@
           <div class="modal-step">
             <div class="modal-step-num">1</div>
             <div>
-              <div class="modal-step-title">Me chama no WhatsApp</div>
-              <div class="modal-step-desc">Diz se você é agente ou blogueiro — eu te encaixo no lugar certo</div>
+              <div class="modal-step-title">Entre em contato</div>
+              <div class="modal-step-desc">Me chame no WhatsApp e diga se você é agente ou blogueira. Eu identifico sua posição e te conecto à estrutura certa.</div>
             </div>
           </div>
           <div class="modal-step">
             <div class="modal-step-num">2</div>
             <div>
-              <div class="modal-step-title">Recebe o método</div>
-              <div class="modal-step-desc">Acesso ao playbook, scripts e suporte direto comigo</div>
+              <div class="modal-step-title">Defina a meta</div>
+              <div class="modal-step-desc">Blogueiras repassam metas que precisam ser concluídas. Agentes trazem metas para execução e participam da operação. Tudo começa com clareza do objetivo.</div>
             </div>
           </div>
           <div class="modal-step">
             <div class="modal-step-num">3</div>
             <div>
-              <div class="modal-step-title">Começa a operar</div>
-              <div class="modal-step-desc">Depositantes reais chegando no mesmo dia — sem esperar semanas</div>
+              <div class="modal-step-title">Execução estratégica</div>
+              <div class="modal-step-desc">Com método, rede e estrutura ativa, as metas entram em operação. Sem improviso. Sem promessa vazia. Execução real.</div>
             </div>
           </div>
           <div class="modal-step">
             <div class="modal-step-num">4</div>
             <div>
-              <div class="modal-step-title">Lucra todo dia</div>
-              <div class="modal-step-desc">Comissões recorrentes caindo na conta — sem teto, sem limite</div>
+              <div class="modal-step-title">Meta concluída</div>
+              <div class="modal-step-desc">A meta é entregue. O resultado é compartilhado. Simples assim.</div>
             </div>
           </div>
         </div>
 
         <div class="modal-testimonial">
-          <div class="modal-testimonial-quote">"Desde que comecei com o Nytzer, estruturei minha vida financeira. O
-            método funciona de verdade e os depositantes chegam todo dia."</div>
-          <div class="modal-testimonial-author">— Agente ativa, 4 meses no clube</div>
+          <div class="modal-testimonial-quote" style="font-style:normal;color:rgba(255,255,255,0.85);">
+            <strong style="color:var(--gold-light);display:block;margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;">O diferencial</strong>
+            O mercado tá cheio de gente que fala bonito e não entrega nada. Eu fiz o contrário: calei a boca e deixei os números falarem. 3 anos. Metas batidas. Comissões reais. Sem uma única semana parada.
+          </div>
         </div>
 
-        <a href="https://wa.me/message/VCX6P4EWPUS4B1" target="_blank" class="modal-cta">
+        <span class="modal-steps-label">— Acesso à operação (CPA 1%)</span>
+        <p class="modal-desc" style="margin-bottom:20px;">
+          Se você é agente ou blogueira e deseja fazer parte dessa estrutura: <strong>me chame no WhatsApp</strong>. Vamos entender sua posição e colocar você no lugar certo da operação.
+        </p>
+
+        <a href="https://wa.me/5522981593740?text=Oi%20Luccas!%20Vi%20seu%20site%20e%20entendi%20o%20que%20%C3%A9%20a%20NYTZERCLUB.%20Podemos%20trabalhar%20juntos%20hoje?" target="_blank" class="modal-cta">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
-          Quero começar a lucrar
+          Quero fazer parte da operação
         </a>
 
       </div><!-- /modal-body -->
