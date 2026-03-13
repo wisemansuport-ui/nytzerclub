@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NYTZER CLUB — @nytzer</title>
+  <title>NytzerClub - Estrategista digital. Influência que converte. Junte-se ao Nytzer Club</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <meta name="description"
     content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club.">
 
   <!-- ── SEO & SOCIAL SHARING (OPEN GRAPH) ── -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://seusite.com.br/">
-  <meta property="og:title" content="NYTZER CLUB — @nytzer">
+  <meta property="og:title" content="NytzerClub - Estrategista digital. Influência que converte.">
   <meta property="og:description"
     content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club e fature comissões reais.">
   <meta property="og:image" content="https://seusite.com.br/capa-compartilhamento.jpg">
@@ -19,7 +21,7 @@
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://seusite.com.br/">
-  <meta property="twitter:title" content="NYTZER CLUB — @nytzer">
+  <meta property="twitter:title" content="NytzerClub - Estrategista digital. Influência que converte.">
   <meta property="twitter:description"
     content="Estrategista digital. Influência que converte. +300 agentes. Junte-se ao Nytzer Club e fature comissões reais.">
   <meta property="twitter:image" content="https://seusite.com.br/capa-compartilhamento.jpg">
@@ -1000,12 +1002,14 @@
       justify-content: center;
       gap: 8px;
       margin-top: 14px;
+      padding: 8px 0;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 9px;
+      font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(201, 168, 76, 0.55);
-      transition: opacity .5s;
+      color: rgba(201, 168, 76, 0.6);
+      transition: opacity .8s;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .feedback-hint.hidden {
@@ -1561,7 +1565,7 @@
         </div>
         <div class="link-info">
           <span class="link-tag">Vagas Limitadas</span>
-          <div class="link-title">Sou agente e gostaria de elevar o nível</div>
+          <div class="link-title">Agente? Eu tenho uma proposta para você</div>
           <div class="link-desc">Ganhe comissões diárias sem se preocupar com CPA mal feito ou reembolsos. Aqui
             escalamos com excelência e estratégia validada</div>
         </div>
@@ -2129,9 +2133,13 @@
         if (dragMoved) { e.stopPropagation(); e.preventDefault(); }
       }, true);
 
-      // ── Touch — hide hint ──
-      track.addEventListener('touchstart', function () {
-        if (hint && !hint.classList.contains('hidden')) hint.classList.add('hidden');
+      // ── Touch — hide hint only on actual carousel scroll ──
+      var hintHidden = false;
+      track.addEventListener('scroll', function () {
+        if (!hintHidden && hint && !hint.classList.contains('hidden')) {
+          hint.classList.add('hidden');
+          hintHidden = true;
+        }
       }, { passive: true });
 
       // ── Init ──
