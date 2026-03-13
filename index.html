@@ -1565,7 +1565,7 @@
         </div>
         <div class="link-info">
           <span class="link-tag">Vagas Limitadas</span>
-          <div class="link-title">Agente? Eu tenho uma proposta para você</div>
+          <div class="link-title">AGENTE? TALVEZ ISSO TE INTERESSE</div>
           <div class="link-desc">Ganhe comissões diárias sem se preocupar com CPA mal feito ou reembolsos. Aqui
             escalamos com excelência e estratégia validada</div>
         </div>
@@ -2008,13 +2008,14 @@
       openModal();
     });
 
-    overlay.addEventListener('click', function (e) {
-      if (overlay._opening) return; // block clicks during open animation
-      if (e.target === overlay) closeModal(); // only close when clicking the dark backdrop directly
-    });
+    /* Modal close strictly on X button - Removing backdrop and swipe close listeners per user request */
+    // overlay.addEventListener('click', function (e) {
+    //   if (overlay._opening) return; 
+    //   if (e.target === overlay) closeModal(); 
+    // });
 
-    sheet.addEventListener('touchstart', function (e) { touchStartY = e.touches[0].clientY; }, { passive: true });
-    sheet.addEventListener('touchend', function (e) { if (e.changedTouches[0].clientY - touchStartY > 80) closeModal(); }, { passive: true });
+    // sheet.addEventListener('touchstart', function (e) { touchStartY = e.touches[0].clientY; }, { passive: true });
+    // sheet.addEventListener('touchend', function (e) { if (e.changedTouches[0].clientY - touchStartY > 80) closeModal(); }, { passive: true });
 
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
